@@ -6,6 +6,10 @@ name = "pypi"
 [packages]
 django = "*"
 googletrans = "==4.0.0rc1"
+django-crispy-forms = "*"
+openexchangerate = "*"
+django-prices-openexchangerates = "*"
+django-prices = "*"
 
 [dev-packages]
 

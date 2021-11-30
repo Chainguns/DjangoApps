@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+{% block content %}
+
+
+<div class="container">
+    <form action="{% url 'exchange' %}" method="post">
+        {% csrf_token %}
+         <label for="currencies">Choose a currency to change from:</label>
+    <select name="currencies" id="currencies">
+        <option value="usd">USD</option>
+    </select>
+        <label for="currencies">Choose a currency to change to:</label>
+    <select name="currencies" id="to_currencies">
+        <option value="usd">USD</option>
+    </select>
+        <div class="row">
+            <div class="col-sm6 mt-3 left">
+                <textarea class="form-control" rows="3" name="amount">{{amount}}</textarea>
+            </div>
+            <div class="col-sm6 mt-3 left">
+                <textarea class="form-control" rows="3">{{converted_amount}}</textarea>
+                <input class="btn btn-primary ml-3 mt-3" type="submit" value="Submit">
+            </div>
+        </div>
+    </form>
+</div>
+{% endblock content %}
